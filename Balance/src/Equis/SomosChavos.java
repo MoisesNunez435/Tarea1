@@ -4,13 +4,13 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 public class SomosChavos {
 	
-	static double Resp1;
-	static double Resp2;
-	static double Resp3;
-	static double Resp4;
-	static double Resp5;
-	static double Resp6;
-	static double Resp7;
+	static int Resp1;
+	static int Resp2;
+	static int Resp3;
+	static int Resp4;
+	static int Resp5;
+	static int Resp6;
+	static int Resp7;
 	static double TotalA;
 	static double TotalP;
 	static double TotalC;
@@ -56,7 +56,7 @@ public class SomosChavos {
 		ActivosFijos [0] = "";
 		ActivosFijos [1] = "Terreno (Inversion)";
 		ActivosFijos [2] = "Edificio (Inversion)";
-		ActivosFijos [3] = "Depreciacion de Edifio";
+		ActivosFijos [3] = "Depreciacion de Edificio";
 		ActivosFijos [4] = "Maquinaria (Inversion)";
 		ActivosFijos [5] = "Depreciacion de Maquinaria";
 		ActivosFijos [6] = "Mobiliario y Equipo de Oficina (Inversion)";
@@ -279,53 +279,151 @@ public class SomosChavos {
 			}
 			} while (Continuar);
 		}
-		
-	for (int i = 1; i < ActivosCirculantes.length; i++) {
+		for (int i = 1; i < ActivosCirculantes.length; i++) {
 			Resp1 += ACirculante[i];
 		}
-	System.out.println("El Total de los Activos Circulantes es: C$ " +Resp1);
 	
 	for (int i = 1; i < ActivosFijos.length; i++) {
 		Resp2 += AFijo[i];
 	}
-	System.out.println("El Total de los Activos Fijos es: C$ " +Resp2);
 	
 	for (int i = 1; i < ActivosIn.length; i++) {
 		Resp3 += AIn[i];
 	}
-	System.out.println("El Total de los Activos Intangible es: C$ " +Resp3);
 	
 	for (int i = 1; i < PasivosCortoPlazo.length; i++) {
 		Resp4 += PCP[i];
 	}
-	System.out.println("El Total de los Pasivos de Corto Plazo es: C$ " +Resp4);
 	
 	for (int i = 1; i < PasivosLargoPlazo.length; i++) {
 		Resp5 += PLP[i];
 	}
-	System.out.println("El Total de los Pasivos de Corto Plazo es: C$ " +Resp5);
 	
 	for (int i = 1; i < CapitalContribuido.length; i++) {
 		Resp6 += CC[i];
 	}
-	System.out.println("El Total de los Pasivos de Corto Plazo es: C$ " +Resp6);
-	
+		
 	for (int i = 1; i < CapitalGanado.length; i++) {
 		Resp7 += CG[i];
 	}
-	
-	System.out.println("El Total de los Pasivos de Corto Plazo es: C$ " +Resp7);
-	
 	TotalA = Resp1 + Resp2 + Resp3;
-	
-	System.out.println("El Total de los Activos es: C$ " +TotalA);
 	
 	TotalP = Resp4 + Resp5;
 	
-	System.out.println("El Total de los Pasivos es: C$ " +TotalP);
-	
 	TotalC = Resp6 + Resp7;
 	
-	System.out.println("El Total del Capital Contable es: C$ " +TotalC);
+		System.out.println("---------------------");//NombreEmpresa+"---------------------");
+		System.out.println("---------------------Balance General---------------------");
+		System.out.println("																											|			1			|			2			|			3			|			4			|");
+		System.out.println("Activos");
+		System.out.println("Activos Circulantes");
+		System.out.println("");
+		System.out.println("Caja																															"+ACirculante[1]);
+		System.out.println("Banco																														"+ACirculante[2]);
+		System.out.println("Fondo de Caja																											"+ACirculante[3]);
+		System.out.println("Instrumentos Financieros																						"+ACirculante[4]);
+		System.out.println("Inversiones Temporales																							"+ACirculante[5]);
+		System.out.println("Clientes																													"+ACirculante[6]);
+		System.out.println("Documentos por Cobrar a Corto Plazo																	"+ACirculante[7]);
+		System.out.println("Deudores																													"+ACirculante[8]);
+		System.out.println("Funcionarios y Empleados																					"+ACirculante[9]);
+		System.out.println("IVA Acreditable																										"+ACirculante[10]);
+		System.out.println("IVA Pendiente de Acreditar																					"+ACirculante[11]);
+		System.out.println("Anticipo de Impuesto																							"+ACirculante[12]);
+		System.out.println("Inventarios																												"+ACirculante[13]);
+		System.out.println("Mercancia en Transito																							"+ACirculante[14]);
+		System.out.println("Anticipo a Proveedores																							"+ACirculante[15]);
+		System.out.println("Papeleria y Utiles																									"+ACirculante[16]);
+		System.out.println("Propaganda y Publicidad																						"+ACirculante[17]);
+		System.out.println("Muestra y Literatura Medica																				"+ACirculante[18]);
+		System.out.println("Prima de Seguros y Fianzas																					"+ACirculante[19]);
+		System.out.println("Rentas Pagadas por Anticipado																			"+ACirculante[20]);
+		System.out.println("Interese Pagados por Anticipado																			"+ACirculante[21]);
+		System.out.println("Fondo de Oportunidad																							"+ACirculante[22]);
+		System.out.println("Total Activos Circulantes																															" +Resp1);
+		System.out.println("");
+		System.out.println("Activos Fijos");
+		System.out.println("Terreno																													"+AFijo[1]);
+		System.out.println("Edificio																													"+AFijo[2]);
+		System.out.println("Depreciacion de Edificio																						"+AFijo[3]);
+		System.out.println("Maquinaria																												"+AFijo[4]);
+		System.out.println("Depreciacion de Maquinaria																				"+AFijo[5]);
+		System.out.println("Mobiliario y Equipo de Oficina																			"+AFijo[6]);
+		System.out.println("Depreciacion de Mobiliario y Equipo de Oficina												"+AFijo[7]);
+		System.out.println("Muebles y Enseres																									"+AFijo[8]);
+		System.out.println("Depreciacion de Muebles y Enseres																		"+AFijo[9]);
+		System.out.println("Equipo de Transporte																							"+AFijo[10]);
+		System.out.println("Depreciacion de Equipo de Transporte																"+AFijo[11]);
+		System.out.println("Equipo de Entrega y Reparto																				"+AFijo[12]);
+		System.out.println("Depreciacion de Equipo de Entrega y Reparto													"+AFijo[13]);
+		System.out.println("Equipo de Computo																								"+AFijo[14]);
+		System.out.println("Depreciacion de Equipo de Computo																	"+AFijo[15]);
+		System.out.println("Depositos en Garantia																							"+AFijo[16]);
+		System.out.println("Acciones y Valores																									"+AFijo[17]);
+		System.out.println("Total Activos Fijos																																		" +Resp2);
+		System.out.println("");
+		System.out.println("Activos Intangibles");
+		System.out.println("Derechos de Autor																									" +AIn[1]);
+		System.out.println("Patentes																													" +AIn[2]);
+		System.out.println("Marcas y Nombres Comerciales																			" +AIn[3]);
+		System.out.println("Credito Mercantil																									" +AIn[4]);
+		System.out.println("Gastos de Investigacion y Desarrollo																	" +AIn[5]);
+		System.out.println("Gastos Preoperativos																								" +AIn[6]);
+		System.out.println("Descuentos en Emision de Obligaciones																" +AIn[7]);
+		System.out.println("Gastos en Colocacion de Valores																			" +AIn[8]);
+		System.out.println("Franquicias																												" +AIn[9]);
+		System.out.println("Gastos de Constitución																							" +AIn[10]);
+		System.out.println("Gastos de Organización																							" +AIn[11]);
+		System.out.println("Gastos de Instalación																								" +AIn[12]);
+		System.out.println("Fondos a Largo Plazo																								" +AIn[13]);
+		System.out.println("Cuentas por Cobrar de Largo Plazo																		" +AIn[14]);
+		System.out.println("Inversiones en Proceso																							" +AIn[15]);
+		System.out.println("Inmuebles no Utilizados																						" +AIn[16]);
+		System.out.println("Total Activos Intangibles																															" +Resp3);
+		System.out.println("Total Activos																																										" +TotalA);
+		System.out.println("");
+		System.out.println("Pasivos");
+		System.out.println("Pasivos de Corto Plazo");
+		System.out.println("Proveedores																												" +PCP[1]);
+		System.out.println("Acreedores																													" +PCP[2]);
+		System.out.println("Documentos por Pagar a Corto Plazo																		" +PCP[3]);
+		System.out.println("Acreedores Bancarios																								" +PCP[4]);
+		System.out.println("Anticipo de Clientes																									" +PCP[5]);
+		System.out.println("Dividendos por Pagar																								" +PCP[6]);
+		System.out.println("Gastos Acumulados por Pagar																					" +PCP[7]);
+		System.out.println("IVA Causado																												" +PCP[8]);
+		System.out.println("IVA Pendiente de Causar																							" +PCP[9]);
+		System.out.println("Impuestos y Derechos por Pagar																				" +PCP[10]);
+		System.out.println("Impuestos y Derechos Retenidos por Enterar															" +PCP[11]);
+		System.out.println("Impuestos sobre la Renta (ISR) por Pagar																" +PCP[12]);
+		System.out.println("Participación de los Trabajadores en las Utilidades												" +PCP[13]);
+		System.out.println("Rentas Cobradas por Anticipado																				" +PCP[14]);
+		System.out.println("Intereses Cobrados por Anticipado																			" +PCP[15]);
+		System.out.println("Total Pasivos de Corto Plazo																																" +Resp4);
+		System.out.println("");
+		System.out.println("Pasivos a Largo Plazo");
+		System.out.println("Acreedores Hipotecarios																							" +PLP[1]);
+		System.out.println("Acreedores Bancarios																								" +PLP[2]);
+		System.out.println("Documentos por Pagar a Largo Plazo																		" +PLP[3]);
+		System.out.println("Obligaciones en Circulación																						" +PLP[4]);
+		System.out.println("Rentas Cobradas por Anticipado a Largo Plazo														" +PLP[5]);
+		System.out.println("Intereses Cobrados por Anticipado a Largo Plazo													" +PLP[6]);
+		System.out.println("Total Pasivos de Corto Plazo																																" +Resp5);
+		System.out.println("Total Pasivos																																												" +TotalP);
+		System.out.println("");
+		System.out.println("Capital Contable");
+		System.out.println("Capital Contribuido");
+		System.out.println("Capital Social																												" +CC[1]);
+		System.out.println("Aportaciones para Futuros Aumentos de Capita													" +CC[2]);
+		System.out.println("Primas en Ventas de Acciones																					" +CC[3]);
+		System.out.println("Total Capital Contribuido																																	" +Resp6);
+		System.out.println("");
+		System.out.println("Capital Ganado");
+		System.out.println("Utilidades Integrales Acumuladas																			" +CG[1]);
+		System.out.println("Pérdidas Integrales Acumuladas																				" +CG[2]);
+		System.out.println("Reservas																														" +CG[3]);
+		System.out.println("Total Capital Ganado																																			" +Resp7);
+		System.out.println("Total Capital Contable																																									" +TotalC);
+		
 	}
 }

@@ -20,7 +20,7 @@ public class SomosChavos {
 		boolean Continuar;
 		
 		double ACirculante [] = new double [23];
-		double AFijo [] = new double [11];
+		double AFijo [] = new double [18];
 		double AIn [] = new double [18];
 		double PCP [] = new double [16];
 		double PLP [] = new double [7];
@@ -52,18 +52,25 @@ public class SomosChavos {
 		ActivosCirculantes [21] = "Intereses Pagados por Anticipado";
 		ActivosCirculantes [22] = "Fondo de Oportunidad";
 		
-		String ActivosFijos [] = new String [11];
+		String ActivosFijos [] = new String [18];
 		ActivosFijos [0] = "";
-		ActivosFijos [1] = "Terreno";
-		ActivosFijos [2] = "Edificio";
-		ActivosFijos [3] = "Maquinaria";
-		ActivosFijos [4] = "Mobiliario y Equipo de Oficina";
-		ActivosFijos [5] = "Muebles y Enseres";
-		ActivosFijos [6] = "Equipo de Transporte";
-		ActivosFijos [7] = "Equipo de Entrega y Reparto";
-		ActivosFijos [8] = "Equipo de Computo";
-		ActivosFijos [9] = "Depositos en Garantia";
-		ActivosFijos [10] = "Acciones y Valores";
+		ActivosFijos [1] = "Terreno (Inversion)";
+		ActivosFijos [2] = "Edificio (Inversion)";
+		ActivosFijos [3] = "Depreciacion de Edifio";
+		ActivosFijos [4] = "Maquinaria (Inversion)";
+		ActivosFijos [5] = "Depreciacion de Maquinaria";
+		ActivosFijos [6] = "Mobiliario y Equipo de Oficina (Inversion)";
+		ActivosFijos [7] = "Depreciacion de Mobiliario y Equipo de Oficina";
+		ActivosFijos [8] = "Muebles y Enseres (Inversion)";
+		ActivosFijos [9] = "Depreciacion de Muebles y Enseres";
+		ActivosFijos [10] = "Equipo de Transporte (Inversion)";
+		ActivosFijos [11] = "Depreciacion de Equipo de Transporte";
+		ActivosFijos [12] = "Equipo de Entrega y Reparto (Inversion)";
+		ActivosFijos [13] = "Depreciacion de Equipo de Entrega y Reparto";
+		ActivosFijos [14] = "Equipo de Computo (Inversion)";
+		ActivosFijos [15] = "Depreciacion de Equipo de Computo";
+		ActivosFijos [16] = "Depositos en Garantia (Inversion)";
+		ActivosFijos [17] = "Acciones y Valores (Inversion)";
 		
 		String ActivosIn [] = new String [18];
 		ActivosIn [0] = "";
